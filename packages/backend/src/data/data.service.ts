@@ -38,7 +38,7 @@ export class DataService {
   }
 
   async findOneBy(filters: any) {
-    return (await this.tournamentRegisterModel.findOne(filters)).toObject();
+    return (await this.tournamentRegisterModel.findOne(filters))?.toObject();
   }
 
   async update(id: string, updateDatumDto: UpdateDatumDto) {
