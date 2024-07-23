@@ -36,7 +36,7 @@ const Login: React.FC<{ history?: any }> = ({ history }) => {
       }
     } catch (error) {
       console.error('Login failed:', error);
-      setErrorMessage('Unable to login, Please check uername & password and try again.')
+      setErrorMessage('Unable to login, Please check username & password and try again.')
     }
   };
 

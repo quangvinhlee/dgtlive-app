@@ -139,7 +139,7 @@ function FidePlayersPage() {
                                         {player.id && <a href={"https://ratings.fide.com/profile/" + player.id} target='_blank'>{player.id}</a>}
 
                                     </td>
-                                    <td className="border px-4 py-2">{player.name}</td>
+                                    <td className="border px-4 py-2">{player.name && <a href={"https://ratings.fide.com/profile/" + player.id} target='_blank'>{player.name}</a>}</td>
                                     <td className="border px-4 py-2">{player.title}</td>
                                     <td className="border px-4 py-2">{player.birthYear}</td>
                                     <td className="border px-4 py-2">
@@ -157,7 +157,7 @@ function FidePlayersPage() {
 
                                         <button className='z-50 px-2 py-1 rounded-sm bg-green-500 text-white text-sm' onClick={() => setSelectedPlayer(player as any)} >
                                             <CiEdit className='inline' /> Edit
-                                        </button>
+                                        </button>*
 
                                         <button className='z-50 px-2 py-1 rounded-sm bg-blue-500 text-white text-sm' onClick={() => handleSyncClick(player._id)} >
                                             <RxUpdate className='inline' /> Update
